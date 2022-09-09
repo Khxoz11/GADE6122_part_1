@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace GADE6122_part_1.Models
 {
-    public class Character : Tile
+    public abstract class Character : Tile
     {
         public int HP { get; set; } 
         public int MaxHP { get; set; }
         public int Damage { get; set; }
-        public Tile[,] Vision { get; set; } 
+        public string Symbol { get; set; }
+        public TileType[]? Vision { get; set; } 
 
         public Character(
             int x, 
@@ -62,6 +63,10 @@ namespace GADE6122_part_1.Models
                     break;
             }
         }
+
+        public abstract Movement ReturnMove();
+
+        public abstract override string ToString();
 
 
         public enum Movement

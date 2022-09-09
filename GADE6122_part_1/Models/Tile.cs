@@ -22,7 +22,8 @@ namespace GADE6122_part_1.Models
             Hero,
             Enemy,
             Gold, 
-            Weapon
+            Weapon,
+            Wall
         }
     }
 }
