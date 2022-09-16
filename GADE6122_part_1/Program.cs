@@ -1,3 +1,5 @@
+using GADE6122_part_1.Models;
+
 namespace GADE6122_part_1
 {
     internal static class Program
@@ -12,6 +14,7 @@ namespace GADE6122_part_1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
         }
     }
 }

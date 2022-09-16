@@ -22,12 +22,12 @@ namespace GADE6122_part_1.Models
 
         public virtual void Attack(Character target)
         {
-            target.HP = Damage - target.HP; 
+            target.HP = target.HP - Damage; 
         }
 
         public bool IsDead()
         {
-            return HP < 0;
+            return HP <= 0;
         }
 
         public bool CheckRange(Character target)
@@ -37,7 +37,7 @@ namespace GADE6122_part_1.Models
 
         private int DistanceTo(Character target)
         {
-            var distance = X - target.X + Y - target.Y;
+            var distance = Math.Abs(X - target.X) + Math.Abs(Y - target.Y);
             return distance; 
         }
 

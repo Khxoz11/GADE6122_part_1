@@ -11,6 +11,7 @@ namespace GADE6122_part_1.Models
         public int X { get; set; }
         public int Y { get; set; }
 
+
         protected Tile(int x, int y)
         {
             X = x;

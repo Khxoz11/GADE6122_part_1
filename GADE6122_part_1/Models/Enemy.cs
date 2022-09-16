@@ -15,15 +15,17 @@ namespace GADE6122_part_1.Models
             int y,
             int hp,
             int maxHP,
+            int damage,
             string symbol) : base(x, y)
         {
             HP = hp;
             MaxHP = maxHP;
             Symbol = symbol;
+			Damage = damage;
         }
         public override string ToString()
         {
-            return $"Enemy at [{X}, {Y}] ({Damage})";
+            return $"Enemy at [{X}, {Y}] (Amount {Damage})";
         }
     }
 }
